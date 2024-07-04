@@ -5,4 +5,5 @@
     <fullyQualifiedTypeName name="user.User"/>
     <fullyQualifiedTypeName name="config.DatabaseConnection"/>
     <fullyQualifiedTypeName name="user.UserRegisterationService"/>
+    <fullyQualifiedTypeName name="user.CheckDuplicationService"/>
 </qualifiedTypeNameHistroy>

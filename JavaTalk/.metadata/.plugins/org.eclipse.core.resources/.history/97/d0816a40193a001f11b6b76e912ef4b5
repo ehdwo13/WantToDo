@@ -2,8 +2,6 @@ package user;
 
 import java.util.Scanner;
 
-
-
 public class UserRegister {
 	
 	public void register(Scanner sc) {
@@ -11,25 +9,19 @@ public class UserRegister {
 		System.out.println("type id");
 		String id = sc.nextLine();
 		CheckDuplicationService cd = new CheckDuplicationService();
-		while(cd.checkId(id)) {
+		while(!cd.checkId(id)) {
             System.out.println("Duplicate id! Type another");
             id = sc.nextLine();
         }
         System.out.println("ID is available.");
 		//암호화 로직
 		System.out.println("type password");
-		String password = sc.nextLine();
-
-		
+		String passwrod = sc.nextLine();
+		//중복처리로직
 		System.out.println("type nickName");
 		String nickName = sc.nextLine();
-		while(cd.checkNickName(nickName)) {
-            System.out.println("Duplicate nickName! Type another");
-            nickName = sc.nextLine();
-        }
-        System.out.println("nickName is available.");
 		
-		User user = new User(id, nickName, password);
+		User user = new User(id, nickName, passwrod);
 		UserRegisterationService usv = new UserRegisterationService();
 		usv.registerUser(user);
 		

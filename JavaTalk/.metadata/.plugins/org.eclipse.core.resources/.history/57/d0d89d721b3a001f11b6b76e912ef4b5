@@ -19,15 +19,9 @@ public class UserRegister {
 		//암호화 로직
 		System.out.println("type password");
 		String password = sc.nextLine();
-
-		
+		//중복처리로직
 		System.out.println("type nickName");
 		String nickName = sc.nextLine();
-		while(cd.checkNickName(nickName)) {
-            System.out.println("Duplicate nickName! Type another");
-            nickName = sc.nextLine();
-        }
-        System.out.println("nickName is available.");
 		
 		User user = new User(id, nickName, password);
 		UserRegisterationService usv = new UserRegisterationService();
