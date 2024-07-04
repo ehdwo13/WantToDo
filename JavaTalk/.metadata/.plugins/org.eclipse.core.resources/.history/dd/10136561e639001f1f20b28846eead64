@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class index {
+
+	public static void main(String[] args) {
+		System.out.println("Welcome to JavaTalk!");
+		System.out.println("choose menu");
+		Scanner sc = new Scanner(System.in);
+		int menu = sc.nextInt();
+		System.out.println("1.login | 2. register | 3. exit");
+		switch(menu) {
+		case 1: break;
+		case 2: break;
+		case 3: break;
+		case 4: break;
+		case 5: break;
+		case 6: break;
+		}
+
+	}
+
+}
