@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="user.UserRegister"/>
+    <fullyQualifiedTypeName name="user.User"/>
+    <fullyQualifiedTypeName name="config.DatabaseConnection"/>
+    <fullyQualifiedTypeName name="user.UserRegisterationService"/>
 </qualifiedTypeNameHistroy>

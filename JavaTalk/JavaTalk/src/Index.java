@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import user.UserRegister;
+
 public class Index {
     public static void main(String[] args) {
         System.out.println("Welcome to JavaTalk!");
@@ -8,13 +10,15 @@ public class Index {
         do {
             System.out.println("choose menu");
             System.out.println("1.login | 2. register | 3. exit");
-            menu = sc.nextInt();
+            menu = Integer.parseInt(sc.nextLine());
             switch(menu) {
                 case 1: 
                     System.out.println("Login selected");
                     break;
-                case 2: 
-                    System.out.println("Register selected");
+                case 2:
+                	System.out.println("Register selected");
+                	UserRegister ur = new UserRegister();
+                	ur.register(sc);
                     break;
                 case 3: 
                     System.out.println("exit");

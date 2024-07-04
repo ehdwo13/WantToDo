@@ -1,0 +1,14 @@
+package user;
+
+import java.util.Scanner;
+
+public class UserRegister {
+	
+	public void User(Scanner sc) {
+		System.out.println("welcome to register");
+		System.out.println("type id");
+		String id = sc.nextLine();
+		
+	}
+	
+}

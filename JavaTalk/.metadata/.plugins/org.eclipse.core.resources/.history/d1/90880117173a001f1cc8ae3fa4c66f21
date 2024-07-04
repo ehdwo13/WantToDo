@@ -1,0 +1,27 @@
+package user;
+
+import java.util.Scanner;
+
+public class UserRegister {
+	
+	public void User(Scanner sc) {
+		System.out.println("welcome to register");
+		//중복처리로직
+		String id = sc.nextLine();
+		System.out.println("type id");
+		//암호화 로직
+		String passwrod = sc.nextLine();
+		System.out.println("type password");
+		//중복처리로직
+		String nickName = sc.nextLine();
+		System.out.println("type nickName");
+		
+		User user = new User(id, nickName, passwrod);
+		UserRegisterationService usv = new UserRegisterationService();
+		usv.registerUser(user);
+		
+		System.out.println("registeration complete!");
+		System.out.println("go back to main page");
+	}
+	
+}
