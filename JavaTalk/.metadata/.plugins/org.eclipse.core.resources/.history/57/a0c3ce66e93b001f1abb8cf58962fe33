@@ -1,14 +1,12 @@
 package user;
 
-import java.security.NoSuchAlgorithmException;
-import java.security.spec.InvalidKeySpecException;
 import java.util.Scanner;
 
 
 
 public class UserRegister {
 	
-	public void register(Scanner sc) throws NoSuchAlgorithmException, InvalidKeySpecException {
+	public void register(Scanner sc) {
 		System.out.println("welcome to register");
 		System.out.println("type id");
 		String id = sc.nextLine();
@@ -18,10 +16,10 @@ public class UserRegister {
             id = sc.nextLine();
         }
         System.out.println("ID is available.");
-        
+		//암호화 로직
 		System.out.println("type password");
 		String password = sc.nextLine();
-		String encryptedPassword = PasswordEncryption.encryptPassword(password);
+
 		
 		System.out.println("type nickName");
 		String nickName = sc.nextLine();
@@ -31,7 +29,7 @@ public class UserRegister {
         }
         System.out.println("nickName is available.");
 		
-		User user = new User(id, nickName, encryptedPassword);
+		User user = new User(id, nickName, password);
 		UserRegisterationService usv = new UserRegisterationService();
 		usv.registerUser(user);
 		

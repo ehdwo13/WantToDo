@@ -18,10 +18,11 @@ public class UserRegister {
             id = sc.nextLine();
         }
         System.out.println("ID is available.");
-        
+		//암호화 로직
 		System.out.println("type password");
 		String password = sc.nextLine();
 		String encryptedPassword = PasswordEncryption.encryptPassword(password);
+
 		
 		System.out.println("type nickName");
 		String nickName = sc.nextLine();
