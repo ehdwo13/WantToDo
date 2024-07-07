@@ -1,0 +1,31 @@
+package user;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import config.DatabaseConnection;
+
+public class UserLoginService {
+	
+	public String match(String id, String password) {
+		String sql = "SELECT COUNT(*) FROM USER WHERE ID = ?";
+		try (Connection connection = DatabaseConnection.getConnection();
+		         PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+		        preparedStatement.setString(1, id);
+
+		        try (ResultSet resultSet = preparedStatement.executeQuery()) {
+		            if (resultSet.next()) {
+		                int count = resultSet.getInt(1);
+		                return count > 0 ? "matchIdFound" : "wrongId";
+		            }
+		        }
+		    } catch (SQLException e) {
+		        e.printStackTrace();
+		    }
+		return "method Error";
+	}
+
+}

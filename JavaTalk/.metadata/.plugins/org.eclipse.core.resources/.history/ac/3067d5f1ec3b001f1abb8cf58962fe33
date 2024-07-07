@@ -1,0 +1,10 @@
+package user;
+
+public class UserLoginService {
+	
+	public boolean match(String id, String password) {
+		String sql = "SELECT COUNT(*) FROM USER WHERE ID = ?";
+		return false;
+	}
+
+}

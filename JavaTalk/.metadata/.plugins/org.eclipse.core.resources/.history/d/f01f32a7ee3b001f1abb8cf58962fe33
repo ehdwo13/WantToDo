@@ -1,0 +1,17 @@
+package user;
+
+import java.util.Scanner;
+
+public class UserLogin {
+
+	public void login(Scanner sc) {
+		System.out.println("type id for login");
+		String id = sc.nextLine();
+		System.out.println("type password");
+		String password = sc.nextLine();
+		
+		UserLoginService uls = new UserLoginService();
+		String isCorrect = uls.match(id, password);
+	}
+
+}

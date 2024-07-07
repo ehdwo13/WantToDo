@@ -1,0 +1,13 @@
+package user;
+
+import java.util.Scanner;
+
+public class UserLogin {
+
+	public void login(Scanner sc) {
+		System.out.println("type id for login");
+		String id = sc.nextLine();
+		
+	}
+
+}

@@ -2,7 +2,6 @@ import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 import java.util.Scanner;
 
-import user.UserLogin;
 import user.UserRegister;
 
 public class Index {
@@ -17,8 +16,6 @@ public class Index {
             switch(menu) {
                 case 1: 
                     System.out.println("Login selected");
-                    UserLogin ul = new UserLogin();
-                    ul.login(sc);
                     break;
                 case 2:
                 	System.out.println("Register selected");
