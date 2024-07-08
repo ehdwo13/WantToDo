@@ -52,7 +52,6 @@ public class Index {
                      break;
                  case 2:
                 	 System.out.println("friends menu selected");
-                	 break;
                  case 3:
                      System.out.println("Logout...");
                      break;

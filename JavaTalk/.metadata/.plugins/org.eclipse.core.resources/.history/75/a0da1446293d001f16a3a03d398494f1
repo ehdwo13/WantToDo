@@ -19,7 +19,7 @@ public class Index {
                     System.out.println("Login selected");
                     UserLogin ul = new UserLogin();
                     if (ul.login(sc)) {
-                       loggedIn(sc);
+                       
                     } else {
                         System.out.println("Login failed or canceled. Returning to main menu.");
                     }
@@ -52,7 +52,6 @@ public class Index {
                      break;
                  case 2:
                 	 System.out.println("friends menu selected");
-                	 break;
                  case 3:
                      System.out.println("Logout...");
                      break;

@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class UserLogin {
 
-    public boolean login(Scanner sc) throws NoSuchAlgorithmException, InvalidKeySpecException {
+    public void login(Scanner sc) throws NoSuchAlgorithmException, InvalidKeySpecException {
         UserLoginService uls = new UserLoginService();
         String isCorrect = "";
 
@@ -15,14 +15,14 @@ public class UserLogin {
             String id = sc.nextLine();
             if (id.equals("q")) {
                 System.out.println("Exiting login process.");
-                return false;
+                break;
             }
             
             System.out.println("Type password (or 'q' to quit):");
             String password = sc.nextLine();
             if (password.equals("q")) {
                 System.out.println("Exiting login process.");
-                return false;
+                break;
             }
 
             isCorrect = uls.match(id, password);
@@ -33,9 +33,7 @@ public class UserLogin {
                 System.out.println("Incorrect password" + System.lineSeparator() + "try again");
             } else if (isCorrect.equals("pass")) {
                 System.out.println("Login successful");
-                return true; 
             }
         }
-        return false;
     }
 }

@@ -18,11 +18,7 @@ public class Index {
                 case 1: 
                     System.out.println("Login selected");
                     UserLogin ul = new UserLogin();
-                    if (ul.login(sc)) {
-                       loggedIn(sc);
-                    } else {
-                        System.out.println("Login failed or canceled. Returning to main menu.");
-                    }
+                    ul.login(sc);
                     break;
                 case 2:
                 	System.out.println("Register selected");
@@ -38,28 +34,5 @@ public class Index {
                     break;
             }
         } while(menu != 3);
-    }
-    public static void loggedIn(Scanner sc) {
-    	int menu;
-    	 do {
-             System.out.println("choose loggedIn menu");
-             System.out.println("1. board | 2. friends | 3. logout");
-             menu = Integer.parseInt(sc.nextLine());
-             switch(menu) {
-                 case 1:
-                     System.out.println("board menu selected");
-                     //board function
-                     break;
-                 case 2:
-                	 System.out.println("friends menu selected");
-                	 break;
-                 case 3:
-                     System.out.println("Logout...");
-                     break;
-                 default:
-                     System.out.println("wrong click"); 
-                     break;
-             }
-         } while(menu != 3);
     }
 }

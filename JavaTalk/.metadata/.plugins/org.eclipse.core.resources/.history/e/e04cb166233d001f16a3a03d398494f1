@@ -9,6 +9,6 @@ create table friends(
 	user_id int,
 	friend_id int,
 	PRIMARY KEY (user_id, friend_id),
-    FOREIGN KEY (user_id) REFERENCES user(count),
-    FOREIGN KEY (friend_id) REFERENCES user(count)
+    FOREIGN KEY (user_id) REFERENCES user(user_count),
+    FOREIGN KEY (friend_id) REFERENCES user(user_count)
 );
